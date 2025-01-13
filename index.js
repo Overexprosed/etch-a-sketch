@@ -6,7 +6,7 @@ let mouseDown = false
 
 buildGridByDensity(lastDensity)
 
-const gridElement = document.querySelector("body > div > div.grid")
+const gridElement = document.querySelector(".grid")
 
 gridElement.addEventListener("mousedown", () => {
     mouseDown = true
@@ -23,7 +23,7 @@ gridElement.addEventListener("mouseover", (event) => {
 })
 
 // event delegation from buttons to board-buttons and decide what was the button from its innerText
-const densityElement = document.querySelector("body > div > div.board-buttons")
+const densityElement = document.querySelector(".board-buttons")
 densityElement.addEventListener("click", (event) => {
     buildGridByDensity(event.target.innerText)
 });
@@ -52,7 +52,7 @@ function buildGridByDensity(density) {
 
 function buildGrid(rows, columns) {
     removeAll()
-    const grid = document.querySelector("body > div > div.grid")
+    const grid = document.querySelector(".grid")
 
     for (let i = 0; i < rows; i++) {
         appendRow(grid, columns)
