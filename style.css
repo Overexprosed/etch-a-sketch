@@ -4,7 +4,7 @@ html {
 }
 
 body {
-    font-family: sans-serif;
+    font-family: Nunito, sans-serif;
     height: 100vh;
     margin: 0;
     padding: 0;
@@ -12,11 +12,11 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background: #78CCCB;
+    background: #84a59d;
 }
 
 .board {
-    background: #FF5E5B;
+    background: #f6bd60;
     border-radius: 24px;
     width: 65%;
     height: 90%;
@@ -32,6 +32,8 @@ body {
     height: 80%;
     display: flex;
     flex-direction: column;
+    margin-top: auto;
+    border: 12px solid #35393c;
 }
 
 .row {
@@ -47,29 +49,46 @@ body {
 }
 
 .board-buttons {
+    flex: 0.5;
     display: flex;
+    align-items: center;
+    margin-bottom: auto;
+}
+
+#large-density {
+    width: 30px;
+    height: 30px;
+}
+
+#medium-density {
+    width: 40px;
+    height: 40px;
+}
+
+#small-density {
+    width: 50px;
+    height: 50px;
+}
+
+#small-density,
+#medium-density,
+#large-density {
+    background: #35393c;
+    border-radius: 50%;
+}
+
+#erase-density {
+    background: darkred;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
 }
 
 .density-buttons {
     display: flex;
     align-items: center;
     margin-right: auto;
-    gap: 16px;
-}
-
-.board-button {
-    background: #FFFFEA;
-    font-family: Montserrat, sans-serif;
-    width: 80px;
-    padding: 8px 0;
-    border: none;
-    border-radius: 6px;
-}
-
-.density-description {
-    font-size: 1.2rem;
-    font-weight: 700;
-    color: #FFFFEA;
+    gap: 32px;
 }
 
 .grid,

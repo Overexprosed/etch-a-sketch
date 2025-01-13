@@ -1,5 +1,5 @@
 // to erase the board and remember last user density choice
-let lastDensity = "small"
+let lastDensity = "large-density"
 
 // remember when mouse is up/down
 let mouseDown = false
@@ -25,24 +25,24 @@ gridElement.addEventListener("mouseover", (event) => {
 // event delegation from buttons to board-buttons and decide what was the button from its innerText
 const densityElement = document.querySelector(".board-buttons")
 densityElement.addEventListener("click", (event) => {
-    buildGridByDensity(event.target.innerText)
+    buildGridByDensity(event.target.id)
 });
 
 function buildGridByDensity(density) {
     switch (density) {
-        case "small":
+        case "small-density":
             buildGrid(16, 22)
             lastDensity = density
             break
-        case "medium":
+        case "medium-density":
             buildGrid(32, 44)
             lastDensity = density
             break
-        case "big":
+        case "large-density":
             buildGrid(64, 88)
             lastDensity = density
             break
-        case "erase":
+        case "erase-density":
             erase()
             break
         default:
